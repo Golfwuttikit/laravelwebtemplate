@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\Homecontroller;
+use App\Http\Controllers\BackendController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +22,8 @@ Route::get('about', [Homecontroller::class,'about']);
 Route::get('contact', [Homecontroller::class,'contact']);
 Route::get('service', [Homecontroller::class,'service']);
 Route::get('login', [Homecontroller::class,'login']);
-
+Route::get('backend/dashboard', [BackendController::class,'dashboard']);
+Route::get('backend/test', [BackendController::class,'BCtest']);
 // Route::get('about', function () {
 //     return view('about',[Homecontrollers::class,'home']);
 // });
